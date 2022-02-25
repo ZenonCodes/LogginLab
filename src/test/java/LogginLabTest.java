@@ -1,3 +1,6 @@
+import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -12,6 +15,15 @@ public class LogginLabTest {
 
     @org.junit.After
     public void tearDown() throws Exception {
+    }
+
+    @Test
+    @DisplayName("Testing Threshold Reached")
+    public void thresholdReached(){
+        LogginLab llTest = new LogginLab();
+        boolean isThresholdReached = llTest.thresholdReached(100);
+        assertEquals(true, isThresholdReached);
+
     }
 
     @org.junit.Test
