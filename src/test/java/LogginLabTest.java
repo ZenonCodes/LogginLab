@@ -21,10 +21,15 @@ public class LogginLabTest {
     @DisplayName("Testing Threshold Reached")
     public void thresholdReached(){
         LogginLab llTest = new LogginLab();
-        boolean isThresholdReached = llTest.thresholdReached(100);
-        assertEquals(true, isThresholdReached);
+        llTest.setThreshold(30);
+        int testLimit = 31;
+        assertEquals(true, llTest.thresholdReached(testLimit));
 
-    }
+
+        }
+
+
+
 
     @org.junit.Test
     public void thresholdExceeds() {
